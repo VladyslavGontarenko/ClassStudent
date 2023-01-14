@@ -1,0 +1,15 @@
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\obj\Debug\net7.0\ClassStudentA.csproj.AssemblyReference.cache
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\obj\Debug\net7.0\ClassStudentA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\obj\Debug\net7.0\ClassStudentA.AssemblyInfoInputs.cache
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\obj\Debug\net7.0\ClassStudentA.AssemblyInfo.cs
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\obj\Debug\net7.0\ClassStudentA.csproj.CoreCompileInputs.cache
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\bin\Debug\net7.0\ClassStudentA.exe
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\bin\Debug\net7.0\ClassStudentA.deps.json
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\bin\Debug\net7.0\ClassStudentA.runtimeconfig.json
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\bin\Debug\net7.0\ClassStudentA.dll
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\bin\Debug\net7.0\ClassStudentA.pdb
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\obj\Debug\net7.0\ClassStudentA.dll
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\obj\Debug\net7.0\refint\ClassStudentA.dll
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\obj\Debug\net7.0\ClassStudentA.pdb
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\obj\Debug\net7.0\ClassStudentA.genruntimeconfig.cache
+C:\Users\ирина\Desktop\c#\ClassStudentA\ClassStudentA\obj\Debug\net7.0\ref\ClassStudentA.dll

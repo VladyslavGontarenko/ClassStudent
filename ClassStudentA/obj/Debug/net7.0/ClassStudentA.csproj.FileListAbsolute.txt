@@ -28,3 +28,5 @@ C:\Users\ирина\Desktop\GitHub\ClassStudent\ClassStudentA\obj\Debug\net7.0\r
 C:\Users\ирина\Desktop\GitHub\ClassStudent\ClassStudentA\obj\Debug\net7.0\ClassStudentA.pdb
 C:\Users\ирина\Desktop\GitHub\ClassStudent\ClassStudentA\obj\Debug\net7.0\ClassStudentA.genruntimeconfig.cache
 C:\Users\ирина\Desktop\GitHub\ClassStudent\ClassStudentA\obj\Debug\net7.0\ref\ClassStudentA.dll
+C:\Users\ирина\Desktop\GitHub\ClassStudent\ClassStudentA\bin\Debug\net7.0\ClassStudentA.xml
+C:\Users\ирина\Desktop\GitHub\ClassStudent\ClassStudentA\obj\Debug\net7.0\ClassStudentA.xml

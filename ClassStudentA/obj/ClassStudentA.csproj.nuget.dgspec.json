@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ирина\\Desktop\\c#\\ClassStudentA\\ClassStudentA\\ClassStudentA.csproj": {}
+    "C:\\Users\\ирина\\Desktop\\GitHub\\ClassStudent\\ClassStudentA\\ClassStudentA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ирина\\Desktop\\c#\\ClassStudentA\\ClassStudentA\\ClassStudentA.csproj": {
+    "C:\\Users\\ирина\\Desktop\\GitHub\\ClassStudent\\ClassStudentA\\ClassStudentA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ирина\\Desktop\\c#\\ClassStudentA\\ClassStudentA\\ClassStudentA.csproj",
+        "projectUniqueName": "C:\\Users\\ирина\\Desktop\\GitHub\\ClassStudent\\ClassStudentA\\ClassStudentA.csproj",
         "projectName": "ClassStudentA",
-        "projectPath": "C:\\Users\\ирина\\Desktop\\c#\\ClassStudentA\\ClassStudentA\\ClassStudentA.csproj",
+        "projectPath": "C:\\Users\\ирина\\Desktop\\GitHub\\ClassStudent\\ClassStudentA\\ClassStudentA.csproj",
         "packagesPath": "C:\\Users\\ирина\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ирина\\Desktop\\c#\\ClassStudentA\\ClassStudentA\\obj\\",
+        "outputPath": "C:\\Users\\ирина\\Desktop\\GitHub\\ClassStudent\\ClassStudentA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -32,6 +32,8 @@ namespace ClassStudentA
         protected int nummer;
         protected int[][] zke;
 
+        protected delegate void Handler(string message);
+        protected event Handler? Automath;
         // public:
         public Student()
         {
@@ -122,6 +124,13 @@ namespace ClassStudentA
                         zke[0][i] = tm[i];
                     }
                     zke[0][i] = z;
+                    if (zke[0].Length > 11 && zke[0].Average() > 100)
+                    {
+                        Automath?.Invoke($"авто-зачет курсовой на {zke[0].Average()}");
+                        zke[0] = new int[1];
+                        zke[0][0] = 0;
+                        SetK(Convert.ToInt32(zke[0].Average()));
+                    }
                 }
             }
             catch (Exception e)

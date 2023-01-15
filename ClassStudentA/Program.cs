@@ -2,7 +2,11 @@
 
 namespace ClassStudentA
 {
-    struct MyDate
+    struct MyDate  /// <summary> 
+                   /// MyDate - альтернатива класса DataTime 
+                   /// хранит информацию о дне ,месяце и годе
+                   /// </summary>
+                   /// <code> MyDate name(Year, Month, Day) </code>
     {
         // private
         int Day;
@@ -23,7 +27,7 @@ namespace ClassStudentA
             GSYear = Year;
         }
 
-        public int GSDay
+        public int GSDay  /// <value> Переопределяет или возвращает значение поля Day </value>
         {
             get
             {
@@ -34,7 +38,7 @@ namespace ClassStudentA
                 Day = value;
             }
         }
-        public int GSMonth
+        public int GSMonth  /// <value> Переопределяет или возвращает значение поля Month </value>
         {
             get
             {
@@ -45,7 +49,7 @@ namespace ClassStudentA
                 Month = value;
             }
         }
-        public int GSYear
+        public int GSYear  /// <value> Переопределяет или возвращает значение поля Year </value>
         {
             get
             {
@@ -57,7 +61,7 @@ namespace ClassStudentA
             }
         }
 
-        public void Print()
+        public void Print()   /// <summary> метод выводящий в консоль информацию записанную в объекте </summary>
         {
             Console.WriteLine($"{Day}.{Month}.{Year}");
         }

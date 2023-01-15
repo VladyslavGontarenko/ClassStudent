@@ -10,7 +10,10 @@ using System.Xml.Linq;
 
 namespace ClassStudentA
 {
-    abstract class Persona : ICloneable, IComparable, IComparer
+    abstract class Persona : ICloneable, IComparable, IComparer  /// <summary>
+                                                                 /// абстрактный родительский класс
+                                                                 /// для класса Student
+                                                                 /// </summary>
     {
         // private
         protected string name;
@@ -25,7 +28,10 @@ namespace ClassStudentA
         abstract public int Compare(object o1, object o2);
     }
 
-    internal class Student : Persona
+    internal class Student : Persona  /// <summary>
+                                      /// Потомок класса Persona
+                                      /// Выполняет хранение информации о студенте
+                                      /// </summary>
     {
         // private:
         protected string ort;
@@ -35,7 +41,10 @@ namespace ClassStudentA
         protected delegate void Handler(string message);
         protected event Handler? Automath;
         // public:
-        public Student()
+        public Student()  /// <summary>
+                          /// конструктор по умолчанию
+                          /// </summary>
+                          /// <code> Student name = new Student() </code>
         {
             SetName("Name");
             SetFamilianame("Familianame");
@@ -48,7 +57,10 @@ namespace ClassStudentA
             zke[1] = new int[1] { 0 };
             zke[2] = new int[1] { 0 };
         }
-        public Student(string name, string familianame, string vatername, string ort, MyDate geburtsdatum, int nummer, int[][] zke)
+        public Student(string name, string familianame, string vatername, string ort, MyDate geburtsdatum, int nummer, int[][] zke)  /// <summary>
+                                                                                                                                     /// конструктор со всеми параметрами класса
+                                                                                                                                     /// <code> Student name(string name, string familianame, string vatername, string ort, MyDate geburtsdatum, int nummer, int[][] zke) </code>
+                                                                                                                                     /// </summary>
         {
             SetName(name);
             SetFamilianame(familianame);
@@ -58,7 +70,10 @@ namespace ClassStudentA
             SetNummer(nummer);
             SetZke(zke);
         }
-        public Student(Student s)
+        public Student(Student s)  /// <summary>
+                                   /// конструктор принимающий в себя другого студента
+                                   /// <code> Student name(Student) </code>
+                                   /// </summary>
         {
             SetName(s.name);
             SetFamilianame(s.familianame);
@@ -69,31 +84,31 @@ namespace ClassStudentA
             SetZke(s.zke);
         }
 
-        public void SetName(string name)
+        public void SetName(string name)  /// <summary> переопределяет значение поля Name </summary>
         {
             this.name = name;
         }
-        public void SetFamilianame(string familianame)
+        public void SetFamilianame(string familianame)  /// <summary> переопределяет значение поля Familianame </summary>
         {
             this.familianame = familianame;
         }
-        public void SetVatername(string vatername)
+        public void SetVatername(string vatername)  /// <summary> переопределяет значение поля Vatername </summary>
         {
             this.vatername = vatername;
         }
-        public void SetOrt(string ort)
+        public void SetOrt(string ort)  /// <summary> переопределяет значение поля Ort </summary>
         {
             this.ort = ort;
         }
-        public void SetGeburtsdatum(MyDate geburtsdatum)
+        public void SetGeburtsdatum(MyDate geburtsdatum)  /// <summary> переопределяет значение поля Geburtsdatum </summary>
         {
             this.geburtsdatum = geburtsdatum;
         }
-        public void SetNummer(int nummer)
+        public void SetNummer(int nummer)  /// <summary> переопределяет значение поля Nummer </summary>
         {
             this.nummer = nummer;
         }
-        public void SetZke(int[][] zke)
+        public void SetZke(int[][] zke)  /// <summary> переопределяет значение поля Zke </summary>
         {
             this.zke = new int[zke.Length][];
             for (int i = 0; i < zke.Length; i++)
@@ -105,7 +120,11 @@ namespace ClassStudentA
                 }
             }
         }
-        public void SetZ(int z)
+        public void SetZ(int z)  /// <summary> переопределяет значение части поля Zke </summary>
+                                 /// <exception cref="score less than or equal to zero || over 12"> 
+                                 /// если переданное значение меньше или равно нулю
+                                 /// а так же если значение больше 12
+                                 /// </exception>
         {
             try
             {
@@ -138,7 +157,11 @@ namespace ClassStudentA
                 Console.WriteLine(e.Message);
             }
         }
-        public void SetK(int k)
+        public void SetK(int k)  /// <summary> переопределяет значение части поля Zke </summary>
+                                 /// <exception cref="score less than or equal to zero || over 12"> 
+                                 /// если переданное значение меньше или равно нулю
+                                 /// а так же если значение больше 12
+                                 /// </exception>
         {
             try
             {
@@ -164,7 +187,11 @@ namespace ClassStudentA
                 Console.WriteLine(e.Message);
             }
         }
-        public void SetE(int e)
+        public void SetE(int e)  /// <summary> переопределяет значение части поля Zke </summary>
+                                 /// <exception cref="score less than or equal to zero || over 12"> 
+                                 /// если переданное значение меньше или равно нулю
+                                 /// а так же если значение больше 12
+                                 /// </exception>
         {
             try
             {
@@ -191,48 +218,48 @@ namespace ClassStudentA
             }
         }
 
-        public string GetName()
+        public string GetName()  /// <summary> возвращает значение поля Name </summary>
         {
             return name;
         }
-        public string GetFamilianame()
+        public string GetFamilianame()  /// <summary> возвращает значение поля Familianame </summary>
         {
             return familianame;
         }
-        public string GetVatername()
+        public string GetVatername()  /// <summary> возвращает значение поля Vatername </summary>
         {
             return vatername;
         }
-        public string GetOrt()
+        public string GetOrt()  /// <summary> возвращает значение поля Ort </summary>
         {
             return ort;
         }
-        public MyDate GetGeburtsdatum()
+        public MyDate GetGeburtsdatum()  /// <summary> возвращает значение поля Geburtsdatum </summary>
         {
             return geburtsdatum;
         }
-        public int GetNummer()
+        public int GetNummer()  /// <summary> возвращает значение поля Nummer </summary>
         {
             return nummer;
         }
-        public int[][] GetZke()
+        public int[][] GetZke()  /// <summary> возвращает значение поля Zke </summary>
         {
             return zke;
         }
-        public int[] GetZ()
+        public int[] GetZ()  /// <summary> возвращает значение части поля Zke </summary>
         {
             return zke[0];
         }
-        public int[] GetK()
+        public int[] GetK()  /// <summary> возвращает значение части поля Zke </summary>
         {
             return zke[1];
         }
-        public int[] GetE()
+        public int[] GetE()  /// <summary> возвращает значение части поля Zke </summary>
         {
             return zke[2];
         }
 
-        public string GSName
+        public string GSName  /// <value> Переопределяет или возвращает значение поля Name </value>
         {
             get
             {
@@ -243,7 +270,7 @@ namespace ClassStudentA
                 SetName(value);
             }
         }
-        public string GSFamilianame
+        public string GSFamilianame  /// <value> Переопределяет или возвращает значение поля Familianame </value>
         {
             get
             {
@@ -254,7 +281,7 @@ namespace ClassStudentA
                 SetFamilianame(value);
             }
         }
-        public string GSVatername
+        public string GSVatername  /// <value> Переопределяет или возвращает значение поля Vatername </value>
         {
             get
             {
@@ -265,7 +292,7 @@ namespace ClassStudentA
                 SetVatername(value);
             }
         }
-        public string GSOrt
+        public string GSOrt  /// <value> Переопределяет или возвращает значение поля Ort </value>
         {
             get
             {
@@ -276,7 +303,7 @@ namespace ClassStudentA
                 SetOrt(value);
             }
         }
-        public int GSGeburtsdatum
+        public int GSGeburtsdatum  /// <value> Переопределяет или возвращает значение поля Geburtsdatum </value>
         {
             get
             {
@@ -285,7 +312,7 @@ namespace ClassStudentA
                 return Convert.ToInt32(td.Year) - geburtsdatum.GSYear;
             }
         }
-        public int GSNummer
+        public int GSNummer  /// <value> Переопределяет или возвращает значение поля Nummer </value>
         {
             get
             {
@@ -296,7 +323,7 @@ namespace ClassStudentA
                 SetNummer(value);
             }
         }
-        public int[][] GSZke
+        public int[][] GSZke  /// <value> Переопределяет или возвращает значение поля Zke </value>
         {
             get
             {
@@ -308,7 +335,7 @@ namespace ClassStudentA
             }
         }
 
-        public override void Print()
+        public override void Print()  /// <summary> метод выводящий в консоль информацию записанную в объекте </summary>
         {
             Console.WriteLine(name);
             Console.WriteLine(familianame);
@@ -326,7 +353,7 @@ namespace ClassStudentA
             }
             Console.WriteLine();
         }
-        public int GetSA()
+        public int GetSA()   /// <summary> возвращает среднее арифметическое вссех баллов студента </summary>
         {
             int z = 0;
 
@@ -458,13 +485,19 @@ namespace ClassStudentA
         }
     }
 
-    class Aspirant : Student
+    class Aspirant : Student  /// <summary>
+                              /// Потомок класса Student
+                              /// Выполняет хранение информации о аспиранте
+                              /// </summary>
     {
         // private
         string desertationtheme;
 
         // public
-        public Aspirant()
+        public Aspirant()  /// <summary>
+                           /// конструктор по умолчанию
+                           /// </summary>
+                           /// <code> Aspirant name = new Aspirant() </code>
         {
             SetName("Name");
             SetFamilianame("Familianame");
@@ -478,7 +511,10 @@ namespace ClassStudentA
             zke[2] = new int[1] { 0 };
             desertationtheme = "desertationtheme";
         }
-        public Aspirant(string name, string familianame, string vatername, string ort, MyDate geburtsdatum, int nummer, int[][] zke, string desertationtheme)
+        public Aspirant(string name, string familianame, string vatername, string ort, MyDate geburtsdatum, int nummer, int[][] zke, string desertationtheme)  /// <summary>
+                                                                                                                                                               /// конструктор со всеми параметрами класса
+                                                                                                                                                               /// <code> Aspirant name(string name, string familianame, string vatername, string ort, MyDate geburtsdatum, int nummer, int[][] zke, string desertationtheme) </code>
+                                                                                                                                                               /// </summary>
         {
             SetName(name);
             SetFamilianame(familianame);
@@ -489,7 +525,10 @@ namespace ClassStudentA
             SetZke(zke);
             SetDesertationtheme(desertationtheme);
         }
-        public Aspirant(Aspirant a)
+        public Aspirant(Aspirant a)  /// <summary>
+                                     /// конструктор принимающий в себя другого студента
+                                     /// <code> Aspirant name(Aspirant) </code>
+                                     /// </summary>
         {
             SetName(a.name);
             SetFamilianame(a.familianame);
@@ -501,16 +540,16 @@ namespace ClassStudentA
             SetDesertationtheme(a.desertationtheme);
         }
 
-        public void SetDesertationtheme(string desertationtheme)
+        public void SetDesertationtheme(string desertationtheme)  /// <summary> переопределяет значение поля Desertationtheme </summary>
         {
             this.desertationtheme = desertationtheme;
         }
-        public string GetDesertationtheme()
+        public string GetDesertationtheme()  /// <summary> возвращает значение поля Desertationtheme </summary>
         {
             return this.desertationtheme;
         }
 
-        public string GSDesertationtheme
+        public string GSDesertationtheme  /// <value> Переопределяет или возвращает значение поля Desertationtheme </value>
         {
             get
             {
@@ -522,7 +561,7 @@ namespace ClassStudentA
             }
         }
 
-        public override void Print()
+        public override void Print()   /// <summary> метод выводящий в консоль информацию записанную в объекте </summary>
         {
             base.Print();
             Console.WriteLine(desertationtheme);

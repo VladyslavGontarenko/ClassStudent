@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace ClassStudentA
 {
-    internal class Group : ICloneable, IComparable
+    internal class Group : ICloneable, IComparable  /// <summary>
+                                                    /// Выполняет хранение информации о группе студентов
+                                                    /// </summary>
     {
         // private:
         Student[] group;
@@ -33,7 +35,10 @@ namespace ClassStudentA
             }
         }
         // public:
-        public Group()
+        public Group()  /// <summary>
+                        /// конструктор по умолчанию
+                        /// </summary>
+                        /// <code> Group name = new Group() </code>
         {
             SetCount(8);
             SetName("NewGroup");
@@ -47,7 +52,10 @@ namespace ClassStudentA
 
             Sort();
         }
-        public Group(int count)
+        public Group(int count)  /// <summary>
+                                 /// конструктор принимающий в себя к-во требуемых студентов
+                                 /// <code> Group name(count) </code>
+                                 /// </summary>
         {
             name = "NewGroup";
             specialization = "nicht";
@@ -61,7 +69,10 @@ namespace ClassStudentA
 
             Sort();
         }
-        public Group(Student[] group)
+        public Group(Student[] group)  /// <summary>
+                                       /// конструктор принимающий в себя группу студентов
+                                       /// <code> Group name(student_group) </code>
+                                       /// </summary>
         {
             name = "NewGroup";
             specialization = "nicht";
@@ -71,7 +82,10 @@ namespace ClassStudentA
 
             Sort();
         }
-        public Group(Group eg)
+        public Group(Group eg)  /// <summary>
+                                /// конструктор принимающий в себя другую группу
+                                /// <code> Group name(group) </code>
+                                /// </summary>
         {
             group = eg.group;
             count = eg.count;
@@ -82,49 +96,49 @@ namespace ClassStudentA
             Sort();
         }
 
-        public void SetGroup(Student[] group)
+        public void SetGroup(Student[] group)  /// <summary> переопределяет значение поля Group </summary>
         {
             this.group = group;
         }
-        public void SetCount(int count)
+        public void SetCount(int count)  /// <summary> переопределяет значение поля Count </summary>
         {
             this.count = count;
         }
-        public void SetName(string name)
+        public void SetName(string name)  /// <summary> переопределяет значение поля Name </summary>
         {
             this.name = name;
         }
-        public void SetSpecialization(string specialization)
+        public void SetSpecialization(string specialization)  /// <summary> переопределяет значение поля Specialization </summary>
         {
             this.specialization = specialization;
         }
-        public void SetNum(int num)
+        public void SetNum(int num)  /// <summary> переопределяет значение поля Num </summary>
         {
             this.num = num;
         }
 
-        public Student[] GetGroup()
+        public Student[] GetGroup()  /// <summary> возвращает значение поля Group </summary>
         {
             return this.group;
         }
-        public int GetCount()
+        public int GetCount()  /// <summary> возвращает значение поля Count </summary>
         {
             return this.count;
         }
-        public string GetName()
+        public string GetName()  /// <summary> возвращает значение поля Name </summary>
         {
             return this.name;
         }
-        public string GetSpecialization()
+        public string GetSpecialization()  /// <summary> возвращает значение поля Specialization </summary>
         {
             return this.specialization;
         }
-        public int GetNum()
+        public int GetNum()  /// <summary> возвращает значение поля Num </summary>
         {
             return num;
         }
 
-        public Student this[uint index]
+        public Student this[uint index]  /// <value> Переопределяет или возвращает значение для части поля Group </value>
         {
             get
             {
@@ -135,7 +149,7 @@ namespace ClassStudentA
                 AddStudent(value);
             }
         }
-        public string GSName
+        public string GSName  /// <value> Переопределяет или возвращает значение поля Name </value>
         {
             get
             {
@@ -146,7 +160,7 @@ namespace ClassStudentA
                 SetName(value);
             }
         }
-        public string GSSpecialization
+        public string GSSpecialization  /// <value> Переопределяет или возвращает значение поля Specialization </value>
         {
             get
             {
@@ -157,7 +171,7 @@ namespace ClassStudentA
                 SetSpecialization(value);
             }
         }
-        public int GSNum
+        public int GSNum  /// <value> Переопределяет или возвращает значение поля Num </value>
         {
             get
             {
@@ -168,7 +182,7 @@ namespace ClassStudentA
                 SetNum(value);
             }
         }
-        public int GSCount
+        public int GSCount  /// <value> Переопределяет или возвращает значение поля Count </value>
         {
             get
             {
@@ -176,7 +190,7 @@ namespace ClassStudentA
             }
         }
 
-        public void Print()
+        public void Print()  /// <summary> метод выводящий в консоль информацию записанную в объекте </summary>
         {
             Console.WriteLine($"{name} - {specialization}");
             for (int i = 0; i < group.Length; i++)
@@ -185,11 +199,11 @@ namespace ClassStudentA
             }
             Console.WriteLine();
         }
-        public void PrintStudent(int num)
+        public void PrintStudent(int num)  /// <summary> метод выводящий в консоль информацию о конкретном студене записанную в объекте </summary>
         {
             group[num - 1].Print();
         }
-        public void AddStudent(Student s)
+        public void AddStudent(Student s)  /// <summary> добавляет переданного студента в группу </summary>
         {
             count++;
 
@@ -204,7 +218,7 @@ namespace ClassStudentA
 
             Sort();
         }
-        public void DeleteStudent(int num)
+        public void DeleteStudent(int num)  /// <summary> удаляет студента из группы по индексу </summary>
         {
             --count;
 
@@ -226,12 +240,12 @@ namespace ClassStudentA
                 }
             }
         }
-        public void FromToThis(Group a, int num)
+        public void FromToThis(Group a, int num)  /// <summary> переносит студента из одной группы в другую </summary>
         {
             this.AddStudent(a.GetGroup()[num - 1]);
             a.DeleteStudent(num - 1);
         }
-        public void DeleteNSS()
+        public void DeleteNSS()  /// <summary> удаление всех учеников не здавших зачет </summary>
         {
             for (int i = 0; i < group.Length; i++)
             {
@@ -246,7 +260,7 @@ namespace ClassStudentA
                 }
             }
         }
-        public void DeleteOBS()
+        public void DeleteOBS()  /// <summary> удаление ученика с самой плохой успеваемостью </summary>
         {
             int numm = 0;
 

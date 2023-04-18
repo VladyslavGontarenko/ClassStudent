@@ -1,4 +1,8 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Security.Cryptography.X509Certificates;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace ClassStudentA
 {
@@ -102,6 +106,22 @@ namespace ClassStudentA
         }
     }
 
+    class StateSaver
+    {
+        //public:
+        public void SaveStudent(Student s, string file)
+        {
+            string jstring = JsonSerializer.Serialize(s);
+            File.WriteAllText(file, jstring);
+        }
+        public void SaveGroup(Group g, string file)
+        {
+            string jstring = JsonSerializer.Serialize(g);
+            jstring += JsonSerializer.Serialize(g.GetGroup());
+            File.WriteAllText(file, jstring);
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -127,8 +147,11 @@ namespace ClassStudentA
             arr[2] = new Student("Greg", "Bregorevich", "Gregoriev", "waldstrasse", new MyDate(2022, 10, 07), 987654321, zke);
             arr[3] = new Student("Greg", "Aregorevich", "Gregoriev", "waldstrasse", new MyDate(2022, 10, 07), 987654321, zke);
 
-            System s = new System();
-            s.Menu();
+            Group gr = new Group(arr);
+
+            StateSaver r = new StateSaver();
+            r.SaveStudent(arr[0], @"C:\Users\ирина\Desktop\GitHub\ClassStudent\ClassStudentA\st3.json");
+            r.SaveGroup(gr, @"C:\Users\ирина\Desktop\GitHub\ClassStudent\ClassStudentA\st3.json");
         }
     }
 }

@@ -1,0 +1,1 @@
+{"GSName":"Greg","GSFamilianame":"Dregorevich","GSVatername":"Gregoriev","GSOrt":"waldstrasse","GSGeburtsdatum":1,"GSNummer":987654321,"GSZke":[[7,5,5,7,7],[11,10,8,7,9],[9,2,6,4,2]]}
